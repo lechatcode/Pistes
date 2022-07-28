@@ -1,0 +1,214 @@
+/* FONT */
+@font-face {
+    font-family: "Work sans";
+    src: url(font/static/WorkSans-Thin.ttf);
+}
+
+body {
+    margin: 1em 20%;
+    background-color:rgb(37, 37, 37);
+    color: rgba(255, 255, 255, 0.885);
+    font-family: Helvetica, Arial, sans-serif ;
+}
+
+main {
+    background-color: rgb(24, 24, 24);
+}
+
+h1 {
+    content: "";
+    border-top: solid 2px rgba(255, 255, 255, 0.37);
+    text-align: center;
+    margin-top: 45px;
+    padding-top: 10px;
+    font-size: xx-large;
+}
+
+.div {
+border-top: 2px solid #78a5a3;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+form {
+    padding-top: 1em;
+}
+
+/* BUTTONS */
+.button {
+        padding: 2em;
+        margin: 1em;
+        margin-bottom: 3em;
+        background-color:#51706f;
+        border-top: 2px solid #78a5a3;
+        border-bottom: 2px solid #78a5a3;
+        display: inline-block;
+        cursor: pointer;
+        color:#ffffff;
+        font-family: "Work sans", Arial;
+        font-size: 17px;
+        padding: 11px 29px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+        box-shadow: 3px 3px 10px #ffffff3a ;
+}
+
+.button:hover,
+.buttonIndice:hover {
+    background-color:#91cccb;
+}
+
+/* FORM */
+form {
+   text-align: center;
+}
+
+input:hover {
+    /* background-color:#b5fffb; */
+    box-shadow: 3px 3px 10px #aff3f163 ;
+}
+
+.button:active,
+.buttonIndice:active {
+	position:relative;
+	top:2px;
+}
+
+.buttonIndice {
+    border: 1px solid white;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+
+/* Animation des textes de confirmations ou d'erreurs */
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 40%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.animatedTitle, .animatedTitleFail {
+  color: rgb(196, 196, 196);
+  font-family: Roboto, Arial, sans-serif;
+  text-align: center;
+}
+
+.animatedTitle > div, .animatedTitleFail > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.animatedTitle > div div, .animatedTitleFail > div div {
+  font-size: 2em;
+  padding: 0.5em 0;
+}
+
+.animatedTitle > div div span, .animatedTitleFail > div div span {
+  display: block;
+}
+
+.animatedTitle > div.text-top {
+  border-bottom: 5px solid rgb(28, 61, 28);
+  top: 0;
+}
+
+.animatedTitle div.text-top div, .animatedTitleFail > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animatedTitle > div.text-top div span:first-child {
+  color: #3eac68;
+}
+
+.animatedTitle > div.text-bottom {
+    color: #3eac68;
+  }
+
+.animatedTitle > div.text-bottom, .animatedTitleFail > div.text-bottom {
+  bottom: 0;
+}
+
+.animatedTitle > div.text-bottom div, .animatedTitleFail > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+.animatedTitleFail> div.text-top div span:first-child {
+    color: #b4525f;
+  }
+
+.animatedTitleFail> div.text-bottom {
+    color: #b4525f;
+}
+
+.animatedTitleFail > div.text-top {
+    border-bottom: 5px solid rgb(212, 138, 138);
+    top: 0;
+}
+
+.displayNone {
+    display: none;
+}
+
+#check1:checked ~ .contentResponsive,
+#check11:checked ~ .contentResponsive,
+#check2:checked ~ .contentResponsive,
+#check3:checked ~ .contentResponsive,
+#check4:checked ~ .contentResponsive,
+#check41:checked ~ .contentResponsive {
+    display: block;
+}
+
+#check1:checked ~ label,
+#check11:checked ~ label,
+#check2:checked ~ label,
+#check3:checked ~ label,
+#check4:checked ~ label,
+#check41:checked ~ label {
+    visibility: hidden;
+}
+
+#check1:checked ~ label:after,
+#check11:checked ~ label:after,
+#check2:checked ~ label:after,
+#check3:checked ~ label:after,
+#check4:checked ~ label:after,
+#check41:checked ~ label:after {
+    content: "Cacher";
+    display: block;
+    visibility: visible;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.intro {
+    border-bottom: 1px solid #78a5a3;
+}
+
+.img02 {
+  width: 25%;
+}
